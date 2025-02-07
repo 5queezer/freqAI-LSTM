@@ -21,4 +21,5 @@ WORKDIR /freqtrade
 RUN sed -i "s/5m/1h/" freqtrade/configuration/config_validation.py
 USER ftuser
 
-RUN  pip install -e . 
+RUN  pip install -e .
+RUN pip install --no-cache tensorflow torch torchvision torchaudio
